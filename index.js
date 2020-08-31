@@ -73,7 +73,7 @@ function allWagesFor() {
   const allDates = this.timeInEvents.map((timeInEvent) => timeInEvent.date);
 
   return allDates.reduce(
-    ((total, date) => (total += wagesEarnedOnDate.call(this, date))).bind(this),
+    (total, date) => (total += wagesEarnedOnDate.call(this, date)),
     0
   );
 }
